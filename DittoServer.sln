@@ -5,6 +5,8 @@ VisualStudioVersion = 25.0.1704.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DittoServer", "DittoServer.csproj", "{2F041DD8-0C39-4948-AEC9-E93FD0C1AD06}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DittoServerCore", "..\DittoServerCore\DittoServerCore.csproj", "{EF7E6378-540D-4B1A-B272-7E153F044657}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2F041DD8-0C39-4948-AEC9-E93FD0C1AD06}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F041DD8-0C39-4948-AEC9-E93FD0C1AD06}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F041DD8-0C39-4948-AEC9-E93FD0C1AD06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7E6378-540D-4B1A-B272-7E153F044657}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7E6378-540D-4B1A-B272-7E153F044657}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7E6378-540D-4B1A-B272-7E153F044657}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7E6378-540D-4B1A-B272-7E153F044657}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
