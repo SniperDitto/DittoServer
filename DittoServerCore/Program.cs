@@ -1,28 +1,33 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-class Program
+﻿namespace DittoServerCore
 {
-    static void Main(string[] args)
+    class Program
     {
-        Thread t = new Thread(Test);
-        t.Name = "thread 1";
-        t.IsBackground = true;//쓰레드 백드라운드 실행 여부(메인 끝나면 같이 끝남)
-        t.Start();
-        
-        Console.WriteLine("waiting for thread to end");
-        t.Join();//쓰레드가 끝날 때까지 대기
-        
-        Console.WriteLine("Hello");
-    }
-
-    static void Test()
-    {
-        while (true)
+        static void Main(string[] args)
         {
-            Console.WriteLine("Thread 1");
+            ThreadPool.SetMinThreads(1, 1);//최소1개
+            ThreadPool.SetMaxThreads(5, 5);//최대5개
 
+            for (int i = 0; i < 5; i++)
+            {
+                //끝나지 않도록 5개 실행해서 남는 알바가 없도록 만든다
+                ThreadPool.QueueUserWorkItem(state => { while (true) { } });
+            }
+            //남는 알바가 없어서 고용 불가
+            ThreadPool.QueueUserWorkItem(Test);//단기알바고용
+
+            Console.WriteLine("Hello");
         }
-    }    
+
+        static void Test(object? o)
+        {
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine("Thread 1");
+            }
+        }    
+    }
 }
+
+
 
 
