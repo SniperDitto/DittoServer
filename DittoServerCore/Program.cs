@@ -2,29 +2,37 @@
 {
     class Program
     {
+        //휘발성 데이터이므로 어셈블리 최적화 방지 -> while 꼬이는 것 방지(잘 안씀)
+        //디버그 모그와 일반 실행 차이 발생 방지
+        volatile static bool _stop = false;
+
+        static void ThreadMain()
+        {
+            Console.WriteLine("thread 1 start");
+
+            while (_stop==false)
+            {
+                //_stop이 true가 될 때까지 계속 실행
+                
+            }
+            
+            Console.WriteLine("thread 1 end");
+        }
+        
         static void Main(string[] args)
         {
-            ThreadPool.SetMinThreads(1, 1);//최소1개
-            ThreadPool.SetMaxThreads(5, 5);//최대5개
+            Task t = new Task(ThreadMain);
+            t.Start();
+            
+            Thread.Sleep(1000);//1초 대기
+            _stop = true;
 
-            for (int i = 0; i < 5; i++)
-            {
-                //thread + threadPool 장점을 가짐
-                Task task = new Task(() => { while (true) { } }, TaskCreationOptions.LongRunning);//오래 걸리는 작업임을 암시 -> 따로 빼서 작업함
-                task.Start();
-            }
-            //따로 빼서 작업했으므로 추가로 알바 고용 가능
-            ThreadPool.QueueUserWorkItem(Test);
-            Console.WriteLine("Hello");
+            Console.WriteLine("쓰레드 종료 대기");
+            
+            t.Wait();//쓰레드가 종료될 때까지 대기
+
+            Console.WriteLine("쓰레드 종료됨");
         }
-
-        static void Test(object? o)
-        {
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("Thread 1");
-            }
-        }    
     }
 }
 
