@@ -1,0 +1,15 @@
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\bin\Debug\net6.0\DittoServerCore.exe
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\bin\Debug\net6.0\DittoServerCore.deps.json
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\bin\Debug\net6.0\DittoServerCore.runtimeconfig.json
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\bin\Debug\net6.0\DittoServerCore.dll
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\bin\Debug\net6.0\DittoServerCore.pdb
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.csproj.AssemblyReference.cache
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.AssemblyInfoInputs.cache
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.AssemblyInfo.cs
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.csproj.CoreCompileInputs.cache
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.dll
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\refint\DittoServerCore.dll
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.pdb
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\DittoServerCore.genruntimeconfig.cache
+C:\Users\ASUS\Documents\DittoServer\DittoServerCore\obj\Debug\net6.0\ref\DittoServerCore.dll
