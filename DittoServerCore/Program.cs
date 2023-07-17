@@ -9,12 +9,12 @@
 
             for (int i = 0; i < 5; i++)
             {
-                //끝나지 않도록 5개 실행해서 남는 알바가 없도록 만든다
-                ThreadPool.QueueUserWorkItem(state => { while (true) { } });
+                //thread + threadPool 장점을 가짐
+                Task task = new Task(() => { while (true) { } }, TaskCreationOptions.LongRunning);//오래 걸리는 작업임을 암시 -> 따로 빼서 작업함
+                task.Start();
             }
-            //남는 알바가 없어서 고용 불가
-            ThreadPool.QueueUserWorkItem(Test);//단기알바고용
-
+            //따로 빼서 작업했으므로 추가로 알바 고용 가능
+            ThreadPool.QueueUserWorkItem(Test);
             Console.WriteLine("Hello");
         }
 
